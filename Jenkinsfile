@@ -5,7 +5,6 @@ pipeline {
       steps {
         sh '''sudo apt-get -y update && sudo apt-get -y upgrade
 '''
-        sh 'sudo apt-get -y update && sudo apt-get upgrade'
       }
     }
 
