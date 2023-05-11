@@ -16,7 +16,12 @@ pipeline {
 
     stage('stage3') {
       steps {
-        sh 'if [ \'grep -c git /tmp/pkg\' -ne 0]'
+        sh '''if [\'grep -c git /tmp/pkg\' -ne 0]
+then 
+dpkg -s git
+else
+sudo apt-get install -y git
+fi'''
       }
     }
 
